@@ -17,7 +17,7 @@ jobs:
           - name: format
             command: make check
           - name: mypy
-            command: myake typecheck
+            command: make typecheck
     name: ${{ matrix.name }}
     steps:
       - uses: actions/checkout@v7
