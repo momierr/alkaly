@@ -1,5 +1,5 @@
 # Makefile
-.PHONY: help lint format typecheck test test-all check docs build clean
+.PHONY: help lint format format-check typecheck test test-all check docs build clean
 
 export UV_NO_CONFIG := 1
 export PIP_CONFIG_FILE := /dev/null
@@ -12,6 +12,9 @@ lint:           ## ruff lint
 
 format:         ## ruff format
 	uv run ruff format src tests
+
+format-check:		## check formatting without changing files
+	uv run ruff format --check src tests
 
 typecheck:      ## mypy strict on src
 	uv run mypy src
