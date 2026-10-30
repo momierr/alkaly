@@ -1,1 +1,1 @@
-A package to cary on spectroscopy simulations of akali atoms in a magnetic field.
+A package to carry on spectroscopy simulations of alkali atoms in a magnetic field.
