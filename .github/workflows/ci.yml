@@ -39,11 +39,3 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: uv sync --locked
       - run: make test
-
-    ci-ok:
-      if: always()
-      needs: [checks, tests]
-      runs-on: ubuntu-latest
-      steps:
-        - run: |
-            [[ "${{ needs.checks.result }}" == "success" && "${{ needs.tests.result }}" == "success" ]]
